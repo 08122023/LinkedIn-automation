@@ -1,0 +1,59 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.logging.Logs;
+
+public class WebTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		  System.setProperty("webdriver.chrome.driver","C:\\Users\\sahil.deshkar\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		driver.get("https://in.linkedin.com/");
+		
+		driver.findElement(By.id("session_key")).click();
+		driver.findElement(By.id("session_key")).sendKeys("sahlideshkar08@gmail.com");
+		
+		driver.findElement(By.id("session_password")).click();
+		driver.findElement(By.id("session_password")).sendKeys("9011970817");
+		driver.findElement(By.xpath("//*[@id=\"main-content\"]/section[1]/div/div/form/button")).click();
+		//WebElement.findElement( By.id(("login-button"))).click();
+		
+		driver.findElement(By.id("join_now")).click();
+		driver.findElement(By.id("email-or-phone")).click();
+		driver.findElement(By.id("email-or-phone")).sendKeys("sahildeshkar19@gmail.com");
+		driver.findElement(By.id("password")).sendKeys("Admin@123");
+		driver.findElement(By.id("join-form-submit")).click();
+		driver.findElement(By.id("first-name")).sendKeys("Admin");
+		driver.findElement(By.id("last-name")).sendKeys("Adminnn");
+		driver.findElement(By.id("join-form-submit")).click();
+	driver.findElement(By.xpath("/html/body")).sendKeys("Chandrapur");
+	driver.findElement(By.id("home_children_button")).click();
+	driver.findElement(By.id("register-verification-phone-number")).sendKeys("9175754780");
+	/*
+	 * if its show's page not found u have to ur automation it means u tryed lots
+	 *  of time to automate same automation script because its a live application 
+	 *  its have chances to block you.
+	 *  
+	 *  
+	 *  if its working its navigate to OTP page OTP will received in ur mobile nu. which is u 
+	 *  entered in application 
+	 *  
+	 *  then u can work on that try to automate other things.
+	 */
+	
+		
+
+
+
+	}
+	
+	
+
+}
